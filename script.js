@@ -8,6 +8,7 @@ menu.onclick = ()=>{
 }
 
 
+
 window.onscroll = () => {
 
     menu.classList.remove('fa-times');
@@ -22,6 +23,33 @@ window.onscroll = () => {
     // }
 
 }
+
+// script.js
+
+document.addEventListener("DOMContentLoaded", function() {
+    const loginForm = document.getElementById("login-form");
+    const signupForm = document.getElementById("signup-form");
+
+    // Add event listeners for form submissions
+    loginForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Perform login form validation and logic
+    });
+
+    signupForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Perform signup form validation and logic
+    });
+
+    // Add login/signup form validation functions
+    function validateLoginForm() {
+        // Validate login form inputs
+    }
+
+    function validateSignupForm() {
+        // Validate signup form inputs
+    }
+});
 
 
 
@@ -49,12 +77,25 @@ function orderPlaced(e){
 }
 
 
+function addToCart(itemName, imageUrl, itemPrice) {
+    let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    let existingItem = cart.find(item => item.name === itemName);
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cart.push({ name: itemName, image: imageUrl, price: itemPrice, quantity: 1 });
+    }
+
+    localStorage.setItem('cartItems', JSON.stringify(cart));
+}
+
 // function loader(){
 //     document.querySelector('.loader-container').classList.add('fade-out');
 // }
 
 // function fadeOut(){
-//     setInterval(loader, 3000);
+//     setInterval(loader, 2000);
 // }
 
 // window.onload = fadeOut();
