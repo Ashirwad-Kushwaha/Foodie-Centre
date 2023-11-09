@@ -30,7 +30,8 @@
             <a href="#Snacks">Snacks</a>
             <a href="#Popular">Popular</a>
             <a href="#review">Reviews</a>
-            <a href="#order">Order</a>
+            <a href="login.html" id="login">Login</a>
+            <a href="cart.html" id="cart">Cart</a>
         </nav>
 
     </header>
@@ -47,14 +48,12 @@
             <h2 id="confirm"></h2>
             <h3 id="blank">Food made with Perfection</h3>
             <p id="blank1">From a world of flavors to your doorstep, our food ordering platform simplifies your cravings, making good food just a few taps away.</p>
-            <a href="#" class="btn">Order now!</a>
+            <a href="index.html#Popular" class="btn">Order now!</a>
         </div>
         <div class="image">
             <img src="images/Home2.jpg" alt="">
         </div>
     </section>
-
-
 
     <!-- home section ends -->
 
@@ -69,12 +68,13 @@
 
 
             <div class="box">
-                <img class="image" src="images/Burger.jpg" alt="">
+                <!-- <img class="image" src="images/Burger.jpg" alt=""> -->
                 <div class="content">
                     <img src="images/burger-icon.jpeg" alt="">
                     <h3>Burgers</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolore?</p>
                 </div>
+                <!-- <a href="#" class="btn" onclick="addToCart('Fried Rice')">Order now</a> -->
+
             </div>
 
             <div class="box">
@@ -82,8 +82,9 @@
                 <div class="content">
                     <img src="images/pizza-icon.jpeg" alt="">
                     <h3>Pizzas</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolore?</p>
                 </div>
+                <!-- <a href="#" class="btn" onclick="addToCart('Fried Rice')">Order now</a> -->
+
             </div>
 
             <div class="box">
@@ -91,8 +92,9 @@
                 <div class="content">
                     <img src="images/wrap-icon.jpeg" alt="">
                     <h3>Wraps</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolore?</p>
                 </div>
+                <!-- <a href="#" class="btn" onclick="addToCart('Fried Rice')">Order now</a> -->
+
             </div>
 
             <div class="box">
@@ -100,8 +102,9 @@
                 <div class="content">
                     <img src="images/pasta-icon.jpeg" alt="">
                     <h3>Pasta</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolore?</p>
                 </div>
+                <!-- <a href="#" class="btn" onclick="addToCart('Fried Rice')">Order now</a> -->
+
             </div>
 
             <div class="box">
@@ -109,8 +112,9 @@
                 <div class="content">
                     <img src="images/noodles-icon.jpeg" alt="">
                     <h3>Noodles</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolore?</p>
                 </div>
+                <!-- <a href="#" class="btn" onclick="addToCart('Fried Rice')">Order now</a> -->
+
             </div>
 
 
@@ -119,8 +123,9 @@
                 <div class="content">
                     <img src="images/coffee-icon.jpeg" alt="">
                     <h3>Coffee</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolore?</p>
                 </div>
+                <!-- <a href="#" class="btn" onclick="addToCart('Fried Rice')">Order now</a> -->
+
             </div>
 
             <div class="box">
@@ -128,8 +133,9 @@
                 <div class="content">
                     <img src="images/samosa-icon.jpeg" alt="">
                     <h3>Samosa</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolore?</p>
                 </div>
+                <!-- <a href="#" class="btn" onclick="addToCart('Fried Rice')">Order now</a> -->
+
             </div>
 
             <div class="box">
@@ -137,8 +143,9 @@
             <div class="content">
                 <img src="images/dosa-icon.jpeg" alt="">
                 <h3>Masala Dosa</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, dolore?</p>
             </div>
+            <!-- <a href="#" class="btn" onclick="addToCart('Fried Rice')">Order now</a> -->
+
         </div>
 
         </div>
@@ -172,7 +179,7 @@
                     <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
-                <a href="#" class="btn">Order now</a>
+                <a href="cart.html" class="btn" onclick="addToCart('Veg Thali', 'images/thaali.jpg', '₹80')">Order now</a>
             </div>
 
             <div class="box">
@@ -189,7 +196,7 @@
                     <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
-                <a href="#" class="btn">Order now</a>
+                <a href="#" class="btn" onclick="addToCart('Fried Rice', 'images/Fried rice.jpg', '₹100')">Order now</a>
             </div>
 
             <div class="box">
@@ -206,7 +213,7 @@
                     <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
-                <a href="#" class="btn">Order now</a>
+                <a href="#" class="btn" onclick="addToCart('Palak Paneer', 'images/Palak paneer.jpg', '₹190')">Order now</a>
             </div>
 
             <div class="box">
@@ -223,7 +230,7 @@
                     <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
-                <a href="#" class="btn">Order now</a>
+                <a href="#" class="btn" onclick="addToCart('Kadhai Paneer', 'images/Kadhai paneer.jpg', '₹210')">Order now</a>
             </div>
 
             <div class="box">
@@ -240,7 +247,7 @@
                     <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
-                <a href="#" class="btn">Order now</a>
+                <a href="#" class="btn" onclick="addToCart('Butter Chicken','images/Butter chicken.jpg', '₹240')">Order now</a>
             </div>
 
             <div class="box">
@@ -257,14 +264,11 @@
                     <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
-                <a href="#" class="btn">Order now</a>
+                <a href="#" class="btn" onclick="addToCart('Biryani', 'images/Biryani.jpg', '₹250')">Order now</a>
             </div>
-
             
 
         </div>
-
-
     </section>
 
 
@@ -280,8 +284,8 @@
         <div class="box-container">
 
             <div class="box">
-                <img src="images/girl-icon.jpg" alt="">
-                <h3>ABCD</h3>
+                <img src="images/Man-icon.jpg" alt="">
+                <h3>Sarvesh</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -289,12 +293,12 @@
                     <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, atque.</p>
+                <p>Best Food in the locality at the minimum price</p>
             </div>
 
             <div class="box">
                 <img src="images/Man-icon.jpg" alt="">
-                <h3>ABCD</h3>
+                <h3>Yash</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -302,12 +306,12 @@
                     <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, atque.</p>
+                <p>Tasty food</p>
             </div>
 
             <div class="box">
-                <img src="images/girl-icon.jpg" alt="">
-                <h3>ABCD</h3>
+                <img src="images/Man-icon.jpg" alt="">
+                <h3>Roshan</h3>
                 <div class="stars">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -315,7 +319,7 @@
                     <i class="fas fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, atque.</p>
+                <p>Peaceful place to eat, fast service with good ethics</p>
             </div>
 
 
@@ -329,7 +333,7 @@
 
     <!-- order section starts -->
 
-    <section class="order" id="order">
+    <!-- <section class="order" id="order">
         <h1 class="heading">Order <span>Now!</span></h1>
         <div class="order-content">
             <div class="image">
@@ -339,7 +343,7 @@
             <div class="row">
                 
                 <!-- <form action="index.html"> -->
-                <div class="inputBox">
+                <!-- <div class="inputBox">
                     <input type="text" placeholder="Name" id="name">
                     <input type="text" placeholder="Ph. No." id="phone">
                 </div>
@@ -349,19 +353,17 @@
                 </div>
                 <textarea placeholder="Address" name="" id="address" cols="30" rows="1" ></textarea>
     
-                <input type="submit" value="Order Now!" class="btn" onclick="orderPlaced()">
+                <input type="submit" value="Order Now!" class="btn" onclick="orderPlaced()"> -->
     
                 <!-- <h3 id="congrats"></h3>
                 <p id="confirm"></p> -->
             <!-- </form> -->
-            </div>
+            <!-- </div>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- order section ends -->
-
-
     
     <!-- footer section starts -->
 
@@ -387,18 +389,10 @@
     <!-- <a href="#home" class="fas fa-angle-up" id="scroll-top"></a> -->
 
 
-
-    <!-- <div class="loader-container">
+<!-- 
+    <div class="loader-container">
         <img src="images/loader.gif" alt="">
     </div> -->
-
-
-
-
-
-
-
-
 
 
     <!-- custom js file link -->
