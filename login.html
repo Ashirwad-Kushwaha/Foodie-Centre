@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("./images/Home.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+        .welcome-text {
+        position: fixed;
+        color: #000;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: white;
+        font-size: 50px;
+        font-weight: bold;
+        }
+        .foodie-centre {
+            display: inline-block;
+        color: coral;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: white;
+        padding: 5px;
+        /* border: 2px solid white; */
+        text-decoration: none;
+    }
+    </style>
+</head>
+<body >
+    <div class="container mt-5" background-color="coral">
+        <div class="welcome-text">
+            Welcome to<br>
+            <a href="index.html" class="foodie-centre">Foodie Centre</a>
+        </div>
+        <div class="row">
+
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4">Login / Signup</h2>
+                        <form id="login-form">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            <div class="text-center mt-3">
+                                <small>Don't have an account? <a href="#" id="signup-link">Signup</a></small>
+                            </div>
+                        </form>
+                        <form id="signup-form" style="display: none;">
+                            <div class="form-group">
+                                <label for="signup-email">Email</label>
+                                <input type="email" class="form-control" id="signup-email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="signup-password">Password</label>
+                                <input type="password" class="form-control" id="signup-password" placeholder="Enter your password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Signup</button>
+                            <div class="text-center mt-3">
+                                <small>Already have an account? <a href="#" id="login-link">Login</a></small>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        const loginForm = document.getElementById("login-form");
+        const signupForm = document.getElementById("signup-form");
+        const signupLink = document.getElementById("signup-link");
+        const loginLink = document.getElementById("login-link");
+      
+        signupLink.addEventListener("click", function(e) {
+          e.preventDefault();
+          loginForm.style.display = "none";
+          signupForm.style.display = "block";
+        });
+      
+        loginLink.addEventListener("click", function(e) {
+          e.preventDefault();
+          loginForm.style.display = "block";
+          signupForm.style.display = "none";
+        });
+      
+        loginForm.addEventListener("submit", function(e) {
+          e.preventDefault();
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          loginUser(email, password);
+        });
+      
+        function loginUser(email, password) {
+          // Get existing user data from localStorage
+          const users = JSON.parse(localStorage.getItem("users")) || [];
+      
+          // Find user with matching email and password
+          const user = users.find(user => user.email === email && user.password === password);
+      
+          if (user) {
+            alert("Login successful!");
+            // Redirect to index.html
+            window.location.href = "index.html";
+          } else {
+            alert("Invalid email or password. Please try again.");
+          }
+        }
+      
+        function signupUser(email, password) {
+          // Get existing user data from localStorage
+          const users = JSON.parse(localStorage.getItem("users")) || [];
+      
+          // Check if email is already registered
+          const existingUser = users.find(user => user.email === email);
+          if (existingUser) {
+            alert("Email is already registered. Please use a different email.");
+            return;
+          }
+      
+          // Add new user to the existing user data
+          users.push({ email, password });
+      
+          // Store the updated user data in localStorage
+          localStorage.setItem("users", JSON.stringify(users));
+      
+          alert("Signup successful!");
+      
+          // Clear the signup form fields
+          document.getElementById("signup-email").value = "";
+          document.getElementById("signup-password").value = "";
+        }
+      </script>
+      </body>
+</html>
