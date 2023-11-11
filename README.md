@@ -1,2 +1,3 @@
 # Foodie-Centre
-A website for food ordering, booking a seat for meal
+A website for food ordering, using html, css, javascript
+It have a login page, home page, cart
